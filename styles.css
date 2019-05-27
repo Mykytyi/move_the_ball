@@ -4,9 +4,8 @@ body {
 }
 
 #field {
-  width: 200px;
-  height: 150px;
-  border: 10px groove black;
+  border-style: solid;
+  border-collor: black;
   background-color: #00FF00;
   position: relative;
   overflow: hidden;
