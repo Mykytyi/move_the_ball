@@ -1,0 +1,30 @@
+warning: LF will be replaced by CRLF in scripts/script.js.
+The file will have its original line endings in your working directory
+[1mdiff --git a/scripts/script.js b/scripts/script.js[m
+[1mindex 02315c9..50558c5 100644[m
+[1m--- a/scripts/script.js[m
+[1m+++ b/scripts/script.js[m
+[36m@@ -8,7 +8,7 @@[m [mlet imgWidth = ball.clientWidth;[m
+ let imgHeight = ball.clientHeight;[m
+ let borderWidth = 10;[m
+ let fieldHeight = 300;[m
+[31m-let fieldWidth = 250;[m
+[32m+[m[32mlet fieldWidth = 500;[m
+ [m
+ field.style.width = `${fieldWidth}px`;[m
+ field.style.height = `${fieldHeight}px`;[m
+[36m@@ -20,12 +20,12 @@[m [mfield.addEventListener('click', function (event) {[m
+ [m
+   if (x < (imgWidth / 2)) {[m
+     x = imgWidth / 2;[m
+[31m-  } else if (x > fieldWidth - imgWidth / 2) {[m
+[32m+[m[32m  } else if (x > (fieldWidth - imgWidth / 2)) {[m
+     x = fieldWidth - imgWidth / 2;[m
+   }[m
+   if (y < (imgHeight / 2)) {[m
+     y = imgHeight / 2;[m
+[31m-  } else if (y > fieldHeight - imgHeight / 2) {[m
+[32m+[m[32m  } else if (y > (fieldHeight - imgHeight / 2)) {[m
+     y = fieldHeight - imgHeight / 2;[m
+   }[m
+ [m

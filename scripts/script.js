@@ -7,25 +7,31 @@ let field = document.getElementById('field');
 let imgWidth = ball.clientWidth;
 let imgHeight = ball.clientHeight;
 let borderWidth = 10;
-let fieldHeight = 300;
+let fieldHeight = 150;
 let fieldWidth = 250;
 
 field.style.width = `${fieldWidth}px`;
 field.style.height = `${fieldHeight}px`;
-field.style.borderWidth = `${borderWidth}px`
+field.style.borderWidth = `${borderWidth}px`;
 
 field.addEventListener('click', function (event) {
   let x = event.clientX;
   let y = event.clientY;
 
+  if (field.style.width !== fieldWidth || field.style.height !== fieldHeight || field.style.borderWidth !== borderWidth) {
+    field.style.width = `${fieldWidth}px`;
+    field.style.height = `${fieldHeight}px`;
+    field.style.borderWidth = `${borderWidth}px`;
+  }
+
   if (x < (imgWidth / 2)) {
     x = imgWidth / 2;
-  } else if (x > fieldWidth - imgWidth / 2) {
+  } else if (x > (fieldWidth - imgWidth / 2)) {
     x = fieldWidth - imgWidth / 2;
   }
   if (y < (imgHeight / 2)) {
     y = imgHeight / 2;
-  } else if (y > fieldHeight - imgHeight / 2) {
+  } else if (y > (fieldHeight - imgHeight / 2)) {
     y = fieldHeight - imgHeight / 2;
   }
 
