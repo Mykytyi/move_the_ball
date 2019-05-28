@@ -18,11 +18,16 @@ field.addEventListener('click', function (event) {
   let x = event.clientX;
   let y = event.clientY;
 
-  if (field.style.width !== fieldWidth || field.style.height !== fieldHeight || field.style.borderWidth !== borderWidth) {
+  if (+field.style.width.match(/\d+/g)[0] !== fieldWidth) {
     field.style.width = `${fieldWidth}px`;
+  }
+  if (+field.style.height.match(/\d+/g)[0] !== fieldHeight) {
     field.style.height = `${fieldHeight}px`;
+  }
+  if (+field.style.borderWidth.match(/\d+/g)[0] !== borderWidth) {
     field.style.borderWidth = `${borderWidth}px`;
   }
+
 
   if (x < (imgWidth / 2)) {
     x = imgWidth / 2;
